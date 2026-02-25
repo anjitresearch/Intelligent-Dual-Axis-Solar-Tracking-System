@@ -4,8 +4,9 @@ import datetime
 import sys
 import os
 
-# Add parent dir to path to import modules
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add current directory and parent dir to path to import modules robustly
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.getcwd())
 
 from simulation.simulator import simulate_day
 
